@@ -1,0 +1,45 @@
+{
+    "targetProject": "",
+    "templates": [
+        {
+            "templateFile": "model.ftl",
+            "targetPath": "modules/{{table.moduleName}}/models/",
+            "targetFileName": "{{table.shortTableName}}.py",
+            "selected": true,
+            "covered": true,
+            "encoding": "utf-8"
+        },
+        {
+            "templateFile": "param.ftl",
+            "targetPath": "modules/{{table.moduleName}}/params/",
+            "targetFileName": "{{table.shortTableName}}_param.py",
+            "selected": true,
+            "covered": true,
+            "encoding": "utf-8"
+        },
+        {
+            "templateFile": "vo.ftl",
+            "targetPath": "modules/{{table.moduleName}}/vos/",
+            "targetFileName": "{{table.shortTableName}}_vo.py",
+            "selected": true,
+            "covered": false,
+            "encoding": "utf-8"
+        },
+        {
+            "templateFile": "service.ftl",
+            "targetPath": "modules/{{table.moduleName}}/services/",
+            "targetFileName": "{{table.shortTableName}}_service.py",
+            "selected": true,
+            "covered": false,
+            "encoding": "utf-8"
+        },
+        {
+            "templateFile": "controller.ftl",
+            "targetPath": "modules/{{table.moduleName}}/controllers/",
+            "targetFileName": "{{table.shortTableName}}_controller.py",
+            "selected": true,
+            "covered": false,
+            "encoding": "utf-8"
+        }
+    ]
+}

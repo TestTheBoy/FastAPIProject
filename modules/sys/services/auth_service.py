@@ -7,10 +7,10 @@ from sqlalchemy.orm import Session
 
 from App_Demo.sm2_util import Sm2Util
 from App_Demo.user_context import UserContext
-from core.constant_context_holder import ConstantContextHolder
-from core.exception import AssertTool
+from App_Demo.core.constant_context_holder import ConstantContextHolder
+from App_Demo.core.exception import AssertTool
 from App_Demo.util import StrUtil, JwtUtil, OrmUtil
-from core.ioc_container import get_service
+from App_Demo.core.ioc_container import get_service
 from modules.sys.enums.vis_type_enum import VisTypeEnum
 from modules.sys.models.dept import DeptOrmModel
 from modules.sys.models.menu import MenuOrmModel

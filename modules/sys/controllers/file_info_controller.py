@@ -8,7 +8,7 @@ from sqlalchemy.orm import Session
 
 
 from App_Demo.util import OrmUtil
-# from core.file_upload_service import FileUploadService  # 暂注释，FileUploadService 未就绪
+# from App_Demo.core.file_upload_service import FileUploadService  # 暂注释，FileUploadService 未就绪
 from database import get_session, transactional_session
 from App_Demo.auth_middleware import SaCheckPermission, SaMode
 from App_Demo.base import R, CommonPage, CommonResult, IdParam, IdsParam

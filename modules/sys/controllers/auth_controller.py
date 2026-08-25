@@ -13,8 +13,8 @@ from sqlalchemy.orm import Session
 from database import get_session, transactional_session
 from App_Demo.auth_middleware import SaCheckPermission, SaMode,SaIgnore
 from App_Demo.base import R,CommonResult
-from core.constant_context_holder import ConstantContextHolder
-from core.ioc_container import get_service
+from App_Demo.core.constant_context_holder import ConstantContextHolder
+from App_Demo.core.ioc_container import get_service
 from modules.sys.params.auth_param import LoginParam
 from modules.sys.services.config_service import ConfigService
 from modules.sys.services.auth_service import AuthService

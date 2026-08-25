@@ -3,8 +3,8 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 
 from App_Demo.base import R
-from core.exception import BizException, GlobalErrorEnum
-from core.permission import NotLoginException, NotPermissionException, SaTokenException
+from App_Demo.core.exception import BizException, GlobalErrorEnum
+from App_Demo.core.permission import NotLoginException, NotPermissionException, SaTokenException
 
 
 def setup_exception_handlers(app: FastAPI):

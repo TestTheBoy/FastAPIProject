@@ -12,8 +12,8 @@ from modules.sys.params.user_param import UpdateUserAvatarParam, UpdateUserInfoP
 from modules.sys.vos.auth_vo import LoginUser
 # from modules.sys.vos.dict_vo import LabelValueVO
 from modules.sys.vos.user_vo import UserVO
-from core.permission import SaCheckPermission, SaIgnore
-from core.permission import SaMode
+from App_Demo.core.permission import SaCheckPermission, SaIgnore
+from App_Demo.core.permission import SaMode
 router = APIRouter(tags=["用户管理"],prefix="")
 
 def get_user_service(db: Session = Depends(get_session)):

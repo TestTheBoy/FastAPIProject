@@ -7,7 +7,7 @@ from typing import Optional, Type, Callable, Any, Union, TypeVar, List
 from overrides.typing_utils import get_origin
 from sqlalchemy.orm import Query
 from typing_extensions import get_args
-from core.snawflake_id_generator import SnowflakeIDGenerator
+from App_Demo.core.snawflake_id_generator import SnowflakeIDGenerator
 from modules.sys.vos.auth_vo import LoginToken,LoginUser
 import jwt
 import datetime

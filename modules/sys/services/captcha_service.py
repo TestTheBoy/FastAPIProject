@@ -9,10 +9,10 @@ from PIL import Image
 from fastapi import Request
 import redis
 from App_Demo.query_param_context import QueryParamContext
-from core.constant_context_holder import ConstantContextHolder
-from core.exception import AssertTool
-from core.middleware.query_param_context import RequestContext
-from core.ioc_container import get_service
+from App_Demo.core.constant_context_holder import ConstantContextHolder
+from App_Demo.core.exception import AssertTool
+from App_Demo.core.middleware.query_param_context import RequestContext
+from App_Demo.core.ioc_container import get_service
 
 class CaptchaService:
      # 定义字符类型常量
@@ -103,7 +103,7 @@ class CaptchaService:
 
         return flag
     
-from core.redis_cache_operator import AbstractRedisCacheOperator
+from App_Demo.core.redis_cache_operator import AbstractRedisCacheOperator
 
 
 class CaptchaCache(AbstractRedisCacheOperator[str]):

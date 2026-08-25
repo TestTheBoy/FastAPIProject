@@ -7,7 +7,7 @@ fastapi_Demo 是一个 fastapi 企业级快速开发平台，基于经典技术�
 本地环境账号密码：superAdmin/123456
 
 
-## 目录结构
+## 目录结构(部分未完成)
 ```lua
 fastapi_Demo/
 ├── cli.py                          -- 命令行工具入口，提供代码生成和表结构查看功能
@@ -243,7 +243,7 @@ pip3 freeze > requirements.txt
 ```
 
 
-## 功能清单
+## 功能清单(部分功能未完成)
 
 - [ ] 系统设置
 	- [x] 用户管理

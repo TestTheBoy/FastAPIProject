@@ -1,12 +1,17 @@
 import json
 import os
 import re
+from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader
 from sqlalchemy import MetaData
 from sqlalchemy.engine import Engine
 
 from App_Demo.util import StrUtil
+
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+GENERATOR_ROOT = Path(__file__).resolve().parent
 
 
 class CodeGenerator:
@@ -130,14 +135,14 @@ class CodeGenerator:
         加载配置文件
         :return:
         """
-        with open("generator/config.json", "r") as f:
+        with open(GENERATOR_ROOT / "config.json", "r", encoding="utf-8") as f:
             self.config = json.load(f)
 
     def gen_code(self):
         """
         生成代码
         """
-        env = Environment(loader=FileSystemLoader('generator/templates'))
+        env = Environment(loader=FileSystemLoader(str(GENERATOR_ROOT / "templates")))
         templates = self.config['templates']
         for table in self.table_list:
             # 关系表不生成控制器
@@ -153,16 +158,16 @@ class CodeGenerator:
                 if not item.get("selected"):
                     continue
                 template = env.get_template(item['templateFile'])
-                path = self.config['targetProject'] + item['targetPath']
+                path = PROJECT_ROOT / self.config['targetProject'] / item['targetPath']
                 # 配置参数替换-模板引擎
                 path = env.from_string(path).render(templateData)
                 # 替换包名为目录
-                path = path.replace(".", "/")
-                if not os.path.exists(path):
-                    os.makedirs(path)
+                path = Path(str(path).replace(".", "/"))
+                if not path.exists():
+                    path.mkdir(parents=True)
                 # 配置参数替换-模板引擎
                 targetFileName = env.from_string(item['targetFileName']).render(templateData)
-                dist = path + targetFileName
+                dist = path / targetFileName
 
                 if os.path.exists(dist):
                     if item.get("covered"):

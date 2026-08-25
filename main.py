@@ -19,9 +19,9 @@ from App_Demo.base import R
 from App_Demo.exception_handler import setup_exception_handlers
 from App_Demo.query_param_middleware import QueryParamContextMiddleware
 from App_Demo.util import JwtUtil
-from core.ioc_container import get_service, register
-from core.redis_token_store import RedisTokenStore
-from core.token_manager import TokenManager
+from App_Demo.core.ioc_container import get_service, register
+from App_Demo.core.redis_token_store import RedisTokenStore
+from App_Demo.core.token_manager import TokenManager
 from modules.sys.controllers.auth_controller import router as auth_router
 from modules.sys.controllers.user_controllers import router as user_router
 from modules.sys.controllers.role_controllers import router as role_router
@@ -100,7 +100,8 @@ class CommonHeaders(BaseModel):
 
 
 #引入静态文件
-app.mount("/static",StaticFiles(directory="static"),name="static")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+app.mount("/static",StaticFiles(directory=os.path.join(BASE_DIR, "static")),name="static")
 
 UPLOAD_DIR = os.path.join(os.path.dirname(__file__), "uploadfiles")
 os.makedirs(UPLOAD_DIR, exist_ok=True)

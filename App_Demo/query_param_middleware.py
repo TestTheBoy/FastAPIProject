@@ -2,7 +2,7 @@ import json
 from fastapi import Request
 from starlette.middleware.base import BaseHTTPMiddleware
 from App_Demo.query_param_context import QueryParamContext
-from core.middleware.query_param_context import RequestContext
+from App_Demo.core.middleware.query_param_context import RequestContext
 
 class QueryParamContextMiddleware(BaseHTTPMiddleware):
     """

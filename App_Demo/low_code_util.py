@@ -10,7 +10,7 @@ from sqlalchemy import text
 from App_Demo.base import BaseOrmModel, BasePageParam
 from sqlalchemy.orm import Query, Session
 
-from core.exception import AssertTool
+from App_Demo.core.exception import AssertTool
 from App_Demo.query_param_context import QueryParamContext
 # from App_Demo.exception import AssertTool
 from App_Demo.util import StrUtil

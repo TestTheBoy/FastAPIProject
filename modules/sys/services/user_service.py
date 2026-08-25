@@ -9,7 +9,7 @@ from App_Demo.base import CommonPage, BasePageParam
 from App_Demo.low_code_util import LowCodeUtil
 from App_Demo.user_context import UserContext
 from App_Demo.util import OrmUtil, StrUtil
-from core.exception import AssertTool
+from App_Demo.core.exception import AssertTool
 from modules.sys.models.dept import DeptOrmModel
 from modules.sys.models.post import PostOrmModel
 from modules.sys.models.user import UserOrmModel

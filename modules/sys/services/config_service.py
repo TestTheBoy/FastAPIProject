@@ -2,7 +2,7 @@ from typing import List
 from App_Demo.base import CommonPage
 from App_Demo.low_code_util import LowCodeUtil
 from App_Demo.util import OrmUtil
-from core.constant_context import ConstantContext
+from App_Demo.core.constant_context import ConstantContext
 from modules.sys.enums.yes_no_enum import YesNoEnum
 from modules.sys.models.config import ConfigOrmModel
 from modules.sys.params.config_param import ConfigPageParam, ConfigParam

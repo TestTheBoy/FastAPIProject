@@ -1,2 +1,69 @@
-.venv
-__pycache__
+# Python cache and tooling
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.pytest_cache/
+.mypy_cache/
+.pyright/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+pytestdebug.log
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Build and packaging output
+build/
+dist/
+*.egg-info/
+site/
+*.whl
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.sqlite3
+*.db
+config_local.py
+database_local.py
+secrets/
+
+# IDE settings
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.code-workspace
+
+# Logs and temp files
+*.log
+logs/
+tmp/
+temp/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Runtime uploads and generated data
+uploadfiles/*
+!uploadfiles/.gitkeep
+uploads/
+media/
+files/
+
+# Editor and generated backup files
+*.swp
+*.swo
+*.bak
+*.orig
